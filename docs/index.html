@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/e019c793cb.js" crossorigin="anonymous"></script>
+    <title>Wealth Segregation in Boston</title>
+    <script type="text/javascript">
+        (function() {
+            // only want one resizer on the page
+            if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+            document.documentElement.className += " g-resizer-v3-init";
+            // require IE9+
+            if (!("querySelector" in document)) return;
+            function resizer() {
+                var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+                    widthById = {};
+                elements.forEach(function(el) {
+                    var parent = el.parentNode,
+                        width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                        minwidth = el.getAttribute("data-min-width"),
+                        maxwidth = el.getAttribute("data-max-width");
+                    widthById[parent.id] = width;
+    
+                    if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                        el.style.display = "block";
+                    } else {
+                        el.style.display = "none";
+                    }
+                });
+                try {
+                    if (window.parent && window.parent.$) {
+                        window.parent.$("body").trigger("resizedcontent", [window]);
+                    }
+                    if (window.require) {
+                        require(['foundation/main'], function() {
+                            require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                                AppCommunicator.triggerResize();
+                            });
+                        });
+                    }
+                } catch(e) { console.log(e); }
+            }
+    
+            document.addEventListener('DOMContentLoaded', resizer);
+            // feel free to replace throttle with _.throttle, if available
+            window.addEventListener('resize', throttle(resizer, 200));        
+    
+            function throttle(func, wait) {
+                // from underscore.js
+                var _now = Date.now || function() { return new Date().getTime(); },
+                    context, args, result, timeout = null, previous = 0;
+                var later = function() {
+                    previous = _now();
+                    timeout = null;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                };
+                return function() {
+                    var now = _now(), remaining = wait - (now - previous);
+                    context = this;
+                    args = arguments;
+                    if (remaining <= 0 || remaining > wait) {
+                        if (timeout) {
+                            clearTimeout(timeout);
+                            timeout = null;
+                        }
+                        previous = now;
+                        result = func.apply(context, args);
+                        if (!timeout) context = args = null;
+                    } else if (!timeout && options.trailing !== false) {
+                        timeout = setTimeout(later, remaining);
+                    }
+                    return result;
+                };
+            }
+    
+           
+        })();
+    </script>
+
+
+    <style>
+        .container {
+            /* Remove the line below if you want a wider page */
+            /* max-width: 800px !important;
+            font-family: 'Georgia', Times, serif;
+          
+          color: #000000; */
+        }
+
+       img{
+          /* display: block;
+          width:900px;
+          margin: 0 auto;
+          transition: 0.3s;
+          height: 500px; */
+        } 
+
+        a {
+          color: #000000;
+          text-decoration: underline;
+        }
+
+        p,h1,.subhead {
+            max-width: 800px !important;
+            /* padding-left: 30px; */
+            font-family: 'Georgia', Times, serif;
+          
+          color: #000000; 
+        }
+
+        .subhead {
+          font-weight: bold;
+          font-size: 20px; 
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <header>
+        <br>
+      
+    </header>
+    <main>
+
+      <img src="goodbog.jpg">
+
+      <br>
+      <h1 class="title"><b>(Re)examining Boston's wealth gap</b></h1>
+    
+
+      <br>
+
+      <p class="subhead">
+        Subhead :)
+      </p>
+    
+        <br>
+        
+        <p><i>Jake Neenan</i> | <a href="https://github.com/jakeneenan" target="_blank"> <i class="fa fa-github fa-lg"></i></a></p>
+        
+      <section>
+        <br>
+
+
+
+<p>
+    Boston's wealth is racially segregated. This is what the Federal Reserve Bank of Boston, collaborating with academics from Duke University and The New School, found in 2015. The report they produced found that, on average, white residents of the city have orders of magnitude higher net worths than Black residents, especially those whose families had lived in the U.S. for many generations. 
+</p>
+
+
+
+
+
+
+
+
+<br>
+<br>
+
+<!-- Generated by ai2html v0.115.5 - 2023-04-05 20:43 -->
+<!-- ai file: circle.pdf -->
+<style media="screen,print">
+	#g-circle_pdf-box ,
+	#g-circle_pdf-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-circle_pdf-box p {
+		margin:0;
+	}
+	#g-circle_pdf-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-circle_pdf-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-circle_pdf-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-circle_pdf-box .g-aiPointText p { white-space: nowrap; }
+	#g-circle_pdf-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-circle_pdf-Artboard_1 p {
+		font-weight:500;
+		line-height:14px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-circle_pdf-Artboard_1 .g-pstyle0 {
+		font-weight:700;
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-circle_pdf-Artboard_1 .g-pstyle1 {
+		height:14px;
+	}
+	#g-circle_pdf-Artboard_1 .g-pstyle2 {
+		font-weight:700;
+		height:14px;
+        font-size:11px;
+		text-align:center;
+		color:rgb(255,255,255);
+	}
+	#g-circle_pdf-Artboard_1 .g-pstyle3 {
+		font-weight:700;
+		height:14px;
+		color:rgb(255,255,255);
+	}
+	#g-circle_pdf-Artboard_1 .g-pstyle4 {
+		font-weight:700;
+		line-height:17px;
+		height:17px;
+		font-size:14px;
+		text-align:center;
+		color:rgb(255,255,255);
+	}
+	#g-circle_pdf-Artboard_1 .g-pstyle5 {
+		font-weight:700;
+		line-height:17px;
+		height:17px;
+		font-size:14px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-circle_pdf-Artboard_1 .g-cstyle0 {
+		letter-spacing:0.014em;
+	}
+	#g-circle_pdf-Artboard_1 .g-cstyle1 {
+		letter-spacing:-0.01em;
+	}
+	#g-circle_pdf-Artboard_1 .g-cstyle2 {
+		letter-spacing:0.039em;
+	}
+	#g-circle_pdf-Artboard_3 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-circle_pdf-Artboard_3 p {
+		font-weight:500;
+		line-height:7px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-circle_pdf-Artboard_3 .g-pstyle0 {
+		font-weight:700;
+		line-height:11px;
+		height:11px;
+		font-size:9px;
+	}
+	#g-circle_pdf-Artboard_3 .g-pstyle1 {
+		height:7px;
+	}
+	#g-circle_pdf-Artboard_3 .g-pstyle2 {
+		font-weight:700;
+		height:7px;
+        font-size:5px;
+		text-align:center;
+		color:rgb(255,255,255);
+	}
+	#g-circle_pdf-Artboard_3 .g-pstyle3 {
+		font-weight:700;
+		height:7px;
+		color:rgb(255,255,255);
+	}
+	#g-circle_pdf-Artboard_3 .g-pstyle4 {
+		font-weight:700;
+		line-height:8px;
+		height:8px;
+		font-size:7px;
+		text-align:center;
+		color:rgb(255,255,255);
+	}
+	#g-circle_pdf-Artboard_3 .g-pstyle5 {
+		font-weight:700;
+		line-height:8px;
+		height:8px;
+		font-size:7px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-circle_pdf-Artboard_3 .g-cstyle0 {
+		letter-spacing:0.014em;
+	}
+	#g-circle_pdf-Artboard_3 .g-cstyle1 {
+		letter-spacing:-0.01em;
+	}
+	#g-circle_pdf-Artboard_3 .g-cstyle2 {
+		letter-spacing:0.039em;
+	}
+
+</style>
+
+<div id="g-circle_pdf-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-circle_pdf-Artboard_1" class="g-artboard" style="width:750px; height:667.102479036199px;" data-aspect-ratio="1.124" data-min-width="750">
+<div style=""></div>
+		<img id="g-circle_pdf-Artboard_1-img" class="g-circle_pdf-Artboard_1-img g-aiImg" alt="" src="circle_pdf-Artboard_1.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:6.7257%;margin-top:-24.9px;left:4.5947%;width:658px;">
+			<p class="g-pstyle0">In the greater Boston area, white households are vastly more wealthy than</p>
+			<p class="g-pstyle0">nonwhite households </p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2976%;margin-top:-9px;left:4.5947%;width:219px;">
+			<p class="g-pstyle1">Median household net worth by race </p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.6226%;margin-top:-16.2px;left:80.0318%;margin-left:-51.5px;width:103px;">
+			<p class="g-pstyle2">Not elsewhere</p>
+			<p class="g-pstyle2">classified</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.283%;margin-top:-9px;left:80.788%;width:116px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle0">r</span>i<span class="g-cstyle1">b</span>bean Black</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:49.8042%;margin-top:-16.2px;left:86.2202%;margin-left:-32px;width:64px;">
+			<p class="g-pstyle2">Pue<span class="g-cstyle2">r</span>to </p>
+			<p class="g-pstyle2">Rican</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:53.4079%;margin-top:-19.3px;left:48.5364%;margin-left:-45.5px;width:91px;">
+			<p class="g-pstyle4">White</p>
+			<p class="g-pstyle4">$247,500</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.8988%;margin-top:-16.2px;left:85.9178%;margin-left:-36px;width:65px;">
+			<p class="g-pstyle2">Other</p>
+			<p class="g-pstyle2">Hispanic</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.0944%;margin-top:-19.3px;left:86.9189%;margin-left:-43.5px;width:87px;">
+			<p class="g-pstyle5">U.S Black</p>
+			<p class="g-pstyle5">$8</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.0735%;margin-top:-16.2px;left:4.5947%;width:618px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents multiracial households. </p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_3 -->
+	<div id="g-circle_pdf-Artboard_3" class="g-artboard" style="max-width: 350px;max-height: 330px" data-aspect-ratio="1.06" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 94.3383% 0;"></div>
+		<img id="g-circle_pdf-Artboard_3-img" class="g-circle_pdf-Artboard_3-img g-aiImg" alt="" src="circle_pdf-Artboard_3.png"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.3314%;margin-top:-12.2px;left:2.9443%;width:334px;">
+			<p class="g-pstyle0">In the greater Boston area, white households are vastly more wealthy than</p>
+			<p class="g-pstyle0">nonwhite households </p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.5503%;margin-top:-4.4px;left:2.9443%;width:118px;">
+			<p class="g-pstyle1">Median household net worth by race </p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.7973%;margin-top:-8px;left:82.2105%;margin-left:-31px;width:62px;">
+			<p class="g-pstyle2">Not elsewhere</p>
+			<p class="g-pstyle2">classified</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.4773%;margin-top:-4.4px;left:83.0115%;width:68px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle0">r</span>i<span class="g-cstyle1">b</span>bean Black</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:49.9634%;margin-top:-8px;left:88.5828%;margin-left:-21px;width:42px;">
+			<p class="g-pstyle2">Pue<span class="g-cstyle2">r</span>to </p>
+			<p class="g-pstyle2">Rican</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:53.3691%;margin-top:-9.2px;left:49.1176%;margin-left:-28px;width:56px;">
+			<p class="g-pstyle4">White</p>
+			<p class="g-pstyle4">$247,500</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.8378%;margin-top:-8px;left:87.8945%;margin-left:-23.5px;width:47px;">
+			<p class="g-pstyle2">Other </p>
+			<p class="g-pstyle2">Hispanic</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:73.9637%;margin-top:-9.2px;left:89.4204%;margin-left:-27px;width:54px;">
+			<p class="g-pstyle5">U.S Black</p>
+			<p class="g-pstyle5">$8</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.7858%;margin-top:-8px;left:2.9443%;width:314px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents multiracial households. </p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2023-04-05 20:43 -->
+
+
+<br>
+<br>
+
+<p>
+    This figure has been cited a lot over the years. There was an entire Spotlight series motivated by it. The Boston Fed is currently working on an update to the 2015 report, slated to be published in the next couple years, which will likely include a single figure destined to be cited just as much.
+</p>
+<br>
+<p>
+    I think it's worth examining the report's findings more closely than popular media has in the past. Its findings are detailed and give a picture of the structural factors contributing to Boston's wealth gap.
+</p>
+<br>
+
+<br>
+
+<p class="subhead">Access to the tools of wealth creation</p>
+
+
+<br>
+
+
+
+
+
+
+
+<!-- Generated by ai2html v0.115.5 - 2023-04-06 15:33 -->
+<!-- ai file: stocks.pdf -->
+<style media="screen,print">
+	#g-stocks_pdf-box ,
+	#g-stocks_pdf-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-stocks_pdf-box p {
+		margin:0;
+	}
+	#g-stocks_pdf-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-stocks_pdf-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-stocks_pdf-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-stocks_pdf-box .g-aiPointText p { white-space: nowrap; }
+	#g-stocks_pdf-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-stocks_pdf-Artboard_1 p {
+		font-weight:500;
+		line-height:14px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-stocks_pdf-Artboard_1 .g-pstyle0 {
+		font-weight:700;
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-stocks_pdf-Artboard_1 .g-pstyle1 {
+		height:14px;
+	}
+	#g-stocks_pdf-Artboard_1 .g-pstyle2 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(255,255,255);
+	}
+	#g-stocks_pdf-Artboard_1 .g-pstyle3 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+	}
+	#g-stocks_pdf-Artboard_1 .g-pstyle4 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(0,0,0);
+	}
+	#g-stocks_pdf-Artboard_1 .g-cstyle0 {
+		letter-spacing:0.039em;
+	}
+	#g-stocks_pdf-Artboard_1 .g-cstyle1 {
+		letter-spacing:0.014em;
+	}
+	#g-stocks_pdf-Artboard_1 .g-cstyle2 {
+		letter-spacing:-0.01em;
+	}
+	#g-stocks_pdf-Artboard_1 .g-cstyle3 {
+		letter-spacing:-0.079em;
+	}
+	#g-stocks_pdf-Artboard_3 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-stocks_pdf-Artboard_3 p {
+		font-weight:500;
+		line-height:7px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-stocks_pdf-Artboard_3 .g-pstyle0 {
+		font-weight:700;
+		line-height:10px;
+		height:10px;
+		font-size:9px;
+	}
+	#g-stocks_pdf-Artboard_3 .g-pstyle1 {
+		height:7px;
+	}
+	#g-stocks_pdf-Artboard_3 .g-pstyle2 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		color:rgb(255,255,255);
+	}
+	#g-stocks_pdf-Artboard_3 .g-pstyle3 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+	}
+	#g-stocks_pdf-Artboard_3 .g-pstyle4 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		color:rgb(0,0,0);
+	}
+	#g-stocks_pdf-Artboard_3 .g-cstyle0 {
+		letter-spacing:0.039em;
+	}
+	#g-stocks_pdf-Artboard_3 .g-cstyle1 {
+		letter-spacing:0.014em;
+	}
+	#g-stocks_pdf-Artboard_3 .g-cstyle2 {
+		letter-spacing:-0.01em;
+	}
+	#g-stocks_pdf-Artboard_3 .g-cstyle3 {
+		letter-spacing:-0.079em;
+	}
+
+</style>
+
+<div id="g-stocks_pdf-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-stocks_pdf-Artboard_1" class="g-artboard" style="width:750px; height:633.160740868956px;" data-aspect-ratio="1.185" data-min-width="750">
+<div style=""></div>
+		<img id="g-stocks_pdf-Artboard_1-img" class="g-stocks_pdf-Artboard_1-img g-aiImg" alt="" src="stocks_pdf-Artboard_1.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.9807%;margin-top:-24.9px;left:9.092%;width:608px;">
+			<p class="g-pstyle0">White households in Boston are over three times more likely to own </p>
+			<p class="g-pstyle0">stocks than Black households </p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.5354%;margin-top:-9px;left:9.092%;width:270px;">
+			<p class="g-pstyle1">Percent of households that own stocks by race</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.7479%;margin-top:-7.7px;left:41.9426%;width:50px;">
+			<p class="g-pstyle2">39.5%</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.5376%;margin-top:-7.7px;left:8.7641%;width:49px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.9083%;margin-top:-7.7px;left:35.4214%;width:41px;">
+			<p class="g-pstyle4">30.3</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:29.6456%;margin-top:-13.7px;left:3.352%;width:90px;">
+			<p class="g-pstyle3">Not elsewhere</p>
+			<p class="g-pstyle3">        classified</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.0686%;margin-top:-7.7px;left:26.2733%;width:41px;">
+			<p class="g-pstyle4">19.4</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.8583%;margin-top:-7.7px;left:2.4093%;width:93px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:46.229%;margin-top:-7.7px;left:18.4187%;width:36px;">
+			<p class="g-pstyle2">9.6</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.0187%;margin-top:-7.7px;left:5.8715%;width:71px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.3894%;margin-top:-7.7px;left:18.2507%;width:36px;">
+			<p class="g-pstyle4">9.4</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.1791%;margin-top:-7.7px;left:4.1171%;width:84px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle0">r</span>to Rican</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.5498%;margin-top:-7.7px;left:17.328%;width:36px;">
+			<p class="g-pstyle4">8.3</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.3395%;margin-top:-7.7px;left:1.9391%;width:100px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle1">r</span>i<span class="g-cstyle2">b</span>bean Black</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:73.7102%;margin-top:-7.7px;left:15.3973%;width:36px;">
+			<p class="g-pstyle4">6.0</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.4999%;margin-top:-7.7px;left:5.5773%;width:73px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:82.8706%;margin-top:-7.7px;left:15.0613%;width:36px;">
+			<p class="g-pstyle4">5.6</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.6603%;margin-top:-7.7px;left:3.484%;width:88px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle3">V</span>erdean</p>
+		</div>
+		<div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:93.0628%;margin-top:-16.2px;left:9.228%;width:618px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents multiracial households. </p>
+		</div>
+	</div>
+
+
+	<!-- Artboard: Artboard_3 -->
+	<div id="g-stocks_pdf-Artboard_3" class="g-artboard" style="max-width: 350px;max-height: 303px" data-aspect-ratio="1.155" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 86.5899% 0;"></div>
+		<img id="g-stocks_pdf-Artboard_3-img" class="g-stocks_pdf-Artboard_3-img g-aiImg" alt="" src="stocks_pdf-Artboard_3.png"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.3968%;margin-top:-11.4px;left:8.1446%;width:303px;">
+			<p class="g-pstyle0">White households in Boston are over three times more likely to own </p>
+			<p class="g-pstyle0">stocks than Black households </p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.6432%;margin-top:-4.3px;left:8.1446%;width:141px;">
+			<p class="g-pstyle1">Percent of households that own stocks by race</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.0218%;margin-top:-3.7px;left:41.8464%;width:36px;">
+			<p class="g-pstyle2">39.5%</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:22.0116%;margin-top:-3.7px;left:7.8083%;width:35px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:30.2607%;margin-top:-3.7px;left:35.1561%;width:31px;">
+			<p class="g-pstyle4">30.3</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.8685%;margin-top:-6.6px;left:1.7562%;width:54px;">
+			<p class="g-pstyle3">Not elsewhere</p>
+			<p class="g-pstyle3">        classified</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.4997%;margin-top:-3.7px;left:25.771%;width:31px;">
+			<p class="g-pstyle4">19.4</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.1596%;margin-top:-3.7px;left:1.3016%;width:56px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.4087%;margin-top:-3.7px;left:17.7127%;width:29px;">
+			<p class="g-pstyle2">9.6</p>
+		</div>
+		<div id="g-ai1-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:49.3986%;margin-top:-3.7px;left:4.8408%;width:45px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai1-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.6476%;margin-top:-3.7px;left:17.5404%;width:29px;">
+			<p class="g-pstyle4">9.4</p>
+		</div>
+		<div id="g-ai1-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.6375%;margin-top:-3.7px;left:2.541%;width:52px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle0">r</span>to Rican</p>
+		</div>
+		<div id="g-ai1-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.8866%;margin-top:-3.7px;left:16.594%;width:29px;">
+			<p class="g-pstyle4">8.3</p>
+		</div>
+		<div id="g-ai1-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.5465%;margin-top:-3.7px;left:0.3066%;width:60px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle1">r</span>i<span class="g-cstyle2">b</span>bean Black</p>
+		</div>
+		<div id="g-ai1-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.7956%;margin-top:-3.7px;left:14.6132%;width:29px;">
+			<p class="g-pstyle4">6.0</p>
+		</div>
+		<div id="g-ai1-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.7855%;margin-top:-3.7px;left:4.0392%;width:46px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai1-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:85.0345%;margin-top:-3.7px;left:14.2687%;width:29px;">
+			<p class="g-pstyle4">5.6</p>
+		</div>
+		<div id="g-ai1-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.0244%;margin-top:-3.7px;left:1.8916%;width:54px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle3">V</span>erdean</p>
+		</div>
+		<div id="g-ai1-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.6215%;margin-top:-7.8px;left:8.3079%;width:307px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents multiracial households. </p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2023-04-06 15:33 -->
+
+
+<br>
+<br>
+
+<p>
+    Stocks are a main avenue for growing one's wealth in the United States. The cumulative value of the stock market tends to increase over time and, for most people, investments in stocks are a way to accumulate money in the long term.  
+</p>
+
+<br>
+
+
+
+
+<!-- Generated by ai2html v0.115.5 - 2023-04-06 19:25 -->
+<!-- ai file: ira_annuity.pdf -->
+<style media="screen,print">
+	#g-ira_annuity_pdf-box ,
+	#g-ira_annuity_pdf-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-ira_annuity_pdf-box p {
+		margin:0;
+	}
+	#g-ira_annuity_pdf-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-ira_annuity_pdf-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-ira_annuity_pdf-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-ira_annuity_pdf-box .g-aiPointText p { white-space: nowrap; }
+	#g-ira_annuity_pdf-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-ira_annuity_pdf-Artboard_1 p {
+		font-weight:500;
+		line-height:14px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-pstyle0 {
+		font-weight:700;
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-pstyle1 {
+		height:14px;
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-pstyle2 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(255,255,255);
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-pstyle3 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-pstyle4 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(0,0,0);
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-cstyle0 {
+		letter-spacing:-0.079em;
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-cstyle1 {
+		letter-spacing:0.014em;
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-cstyle2 {
+		letter-spacing:-0.01em;
+	}
+	#g-ira_annuity_pdf-Artboard_1 .g-cstyle3 {
+		letter-spacing:0.039em;
+	}
+	#g-ira_annuity_pdf-Artboard_3 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-ira_annuity_pdf-Artboard_3 p {
+		font-weight:500;
+		line-height:7px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-pstyle0 {
+		font-weight:700;
+		line-height:10px;
+		height:10px;
+		font-size:8px;
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-pstyle1 {
+		height:7px;
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-pstyle2 {
+		font-weight:700;
+		line-height:5px;
+		height:5px;
+		color:rgb(255,255,255);
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-pstyle3 {
+		font-weight:700;
+		line-height:5px;
+		height:5px;
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-pstyle4 {
+		font-weight:700;
+		line-height:5px;
+		height:5px;
+		color:rgb(0,0,0);
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-cstyle0 {
+		letter-spacing:-0.079em;
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-cstyle1 {
+		letter-spacing:0.014em;
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-cstyle2 {
+		letter-spacing:-0.01em;
+	}
+	#g-ira_annuity_pdf-Artboard_3 .g-cstyle3 {
+		letter-spacing:0.039em;
+	}
+
+</style>
+
+<div id="g-ira_annuity_pdf-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-ira_annuity_pdf-Artboard_1" class="g-artboard" style="width:750px; height:608.20103748868px;" data-aspect-ratio="1.233" data-min-width="750">
+<div style=""></div>
+		<img id="g-ira_annuity_pdf-Artboard_1-img" class="g-ira_annuity_pdf-Artboard_1-img g-aiImg" alt="" src="ira_annuity_pdf-Artboard_1.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:6.3906%;margin-top:-24.9px;left:8.8854%;width:527px;">
+			<p class="g-pstyle0">White Bostonians have more secure retirements than their </p>
+			<p class="g-pstyle0">nonwhite neighbors </p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.1732%;margin-top:-9px;left:8.8854%;width:408px;">
+			<p class="g-pstyle1">Percent of households with a retirement account or other annuity by race</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.5307%;margin-top:-7.7px;left:54.848%;width:56px;">
+			<p class="g-pstyle2">56.2%</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.5172%;margin-top:-7.7px;left:8.0934%;width:49px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.0671%;margin-top:-7.7px;left:40.9107%;width:47px;">
+			<p class="g-pstyle4">38.6</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:29.0536%;margin-top:-7.7px;left:2.5107%;width:88px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle0">V</span>erdean</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.6034%;margin-top:-7.7px;left:36.8814%;width:47px;">
+			<p class="g-pstyle4">33.8</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.5899%;margin-top:-7.7px;left:7.9454%;width:49px;">
+			<p class="g-pstyle3">N.E.C</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.1397%;margin-top:-7.7px;left:32.5973%;width:47px;">
+			<p class="g-pstyle4">28.1</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9618%;margin-top:-7.7px;left:2.184%;width:93px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.676%;margin-top:-7.7px;left:26.8067%;width:47px;">
+			<p class="g-pstyle2">21.2</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.4981%;margin-top:-7.7px;left:5.2773%;width:71px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.2123%;margin-top:-7.7px;left:26.7227%;width:47px;">
+			<p class="g-pstyle4">21.1</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.0344%;margin-top:-7.7px;left:1.2133%;width:100px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle1">r</span>i<span class="g-cstyle2">b</span>bean Black</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.7487%;margin-top:-7.7px;left:22.6107%;width:47px;">
+			<p class="g-pstyle4">16.2</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.5708%;margin-top:-7.7px;left:3.7413%;width:84px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle3">r</span>to Rican</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:85.285%;margin-top:-7.7px;left:15.6787%;width:41px;">
+			<p class="g-pstyle4">7.5</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.1071%;margin-top:-7.7px;left:5.204%;width:73px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.909%;margin-top:-16.2px;left:9.0413%;width:618px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents multiracial households. </p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_3 -->
+	<div id="g-ira_annuity_pdf-Artboard_3" class="g-artboard" style="max-width: 350px;max-height: 277px" data-aspect-ratio="1.263" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 79.1676% 0;"></div>
+		<img id="g-ira_annuity_pdf-Artboard_3-img" class="g-ira_annuity_pdf-Artboard_3-img g-aiImg" alt="" src="ira_annuity_pdf-Artboard_3.png"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:6.2849%;margin-top:-11.4px;left:9.6778%;width:252px;">
+			<p class="g-pstyle0">White Bostonians have more secure retirements than their </p>
+			<p class="g-pstyle0">nonwhite neighbors </p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.1481%;margin-top:-4.7px;left:9.6778%;width:198px;">
+			<p class="g-pstyle1">Percent of households with a retirement account or other annuity by race</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.425%;margin-top:-3.1px;left:54.5344%;width:37px;">
+			<p class="g-pstyle2">56.2%</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.5077%;margin-top:-3.1px;left:8.9046%;width:34px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1693%;margin-top:-3.1px;left:40.9202%;width:33px;">
+			<p class="g-pstyle4">38.6</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.8911%;margin-top:-3.1px;left:3.4445%;width:52px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle0">V</span>erdean</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.5526%;margin-top:-3.1px;left:36.9878%;width:33px;">
+			<p class="g-pstyle4">33.8</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.2605%;margin-top:-5.8px;left:3.1969%;width:53px;">
+			<p class="g-pstyle3">Not elsewhere</p>
+			<p class="g-pstyle3">        classified</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:46.936%;margin-top:-3.1px;left:32.319%;width:33px;">
+			<p class="g-pstyle4">28.1</p>
+		</div>
+		<div id="g-ai1-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.0187%;margin-top:-3.1px;left:2.6256%;width:54px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai1-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.6802%;margin-top:-3.1px;left:27.1677%;width:33px;">
+			<p class="g-pstyle2">21.2</p>
+		</div>
+		<div id="g-ai1-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.402%;margin-top:-3.1px;left:6.1566%;width:44px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai1-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.0636%;margin-top:-3.1px;left:27.086%;width:33px;">
+			<p class="g-pstyle4">21.1</p>
+		</div>
+		<div id="g-ai1-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.1463%;margin-top:-3.1px;left:1.6783%;width:58px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle1">r</span>i<span class="g-cstyle2">b</span>bean Black</p>
+		</div>
+		<div id="g-ai1-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.4469%;margin-top:-3.1px;left:23.0729%;width:33px;">
+			<p class="g-pstyle4">16.2</p>
+		</div>
+		<div id="g-ai1-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.5296%;margin-top:-3.1px;left:4.1574%;width:50px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle3">r</span>to Rican</p>
+		</div>
+		<div id="g-ai1-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:85.1912%;margin-top:-3.1px;left:16.3075%;width:31px;">
+			<p class="g-pstyle4">7.5</p>
+		</div>
+		<div id="g-ai1-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:85.913%;margin-top:-3.1px;left:5.5849%;width:45px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai1-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.8945%;margin-top:-7.9px;left:9.8298%;width:294px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents multiracial households. </p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2023-04-06 19:25 -->
+
+
+
+
+
+<br>
+
+<p>
+    Similar to stocks, and individual retirement acounts and annuities -- financial products offered by insurance companies that provide fixed payments at regular intervals, often used to support people in their retirements -- are tools people use to grow wealth. IRAs are often safe, long-term investments that, like the market, are liable to increase over any significant period of time. Annuities are slightly more complicated, but have a simialar general idea. These are methods of taking the money you have today and turning into more money for your future self. 
+</p>
+
+<br>
+
+<p>
+	But, crucially, one needs disposable income, sometimes large amounts of it, to make these investments in the first place. They have a barrier to entry that makes them difficult to take full advantage of when you're trying to make ends meet.
+</p>
+
+<br>
+<br>
+
+
+
+
+
+
+<!-- Generated by ai2html v0.115.5 - 2023-04-08 22:06 -->
+<!-- ai file: mortgage_debt_homeowners.pdf -->
+<style media="screen,print">
+	#g-mortgage_debt_homeowners_pdf-box ,
+	#g-mortgage_debt_homeowners_pdf-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-mortgage_debt_homeowners_pdf-box p {
+		margin:0;
+	}
+	#g-mortgage_debt_homeowners_pdf-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-mortgage_debt_homeowners_pdf-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-mortgage_debt_homeowners_pdf-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-mortgage_debt_homeowners_pdf-box .g-aiPointText p { white-space: nowrap; }
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 p {
+		font-weight:500;
+		line-height:14px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-pstyle0 {
+		font-weight:700;
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-pstyle1 {
+		height:14px;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-pstyle2 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(0,0,0);
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-pstyle3 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-pstyle4 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(255,255,255);
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-cstyle0 {
+		letter-spacing:-0.079em;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-cstyle1 {
+		letter-spacing:0.014em;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-cstyle2 {
+		letter-spacing:-0.01em;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_1 .g-cstyle3 {
+		letter-spacing:0.039em;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 p {
+		font-weight:500;
+		line-height:7px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-pstyle0 {
+		font-weight:700;
+		line-height:10px;
+		height:10px;
+		font-size:8px;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-pstyle1 {
+		height:7px;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-pstyle2 {
+		font-weight:700;
+		line-height:5px;
+		height:5px;
+		color:rgb(0,0,0);
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-pstyle3 {
+		font-weight:700;
+		line-height:5px;
+		height:5px;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-pstyle4 {
+		font-weight:700;
+		line-height:5px;
+		height:5px;
+		color:rgb(255,255,255);
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-cstyle0 {
+		letter-spacing:-0.079em;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-cstyle1 {
+		letter-spacing:0.014em;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-cstyle2 {
+		letter-spacing:-0.01em;
+	}
+	#g-mortgage_debt_homeowners_pdf-Artboard_3 .g-cstyle3 {
+		letter-spacing:0.039em;
+	}
+
+</style>
+
+<div id="g-mortgage_debt_homeowners_pdf-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-mortgage_debt_homeowners_pdf-Artboard_1" class="g-artboard" style="width:750px; height:644.591473533352px;" data-aspect-ratio="1.164" data-min-width="750">
+<div style=""></div>
+		<img id="g-mortgage_debt_homeowners_pdf-Artboard_1-img" class="g-mortgage_debt_homeowners_pdf-Artboard_1-img g-aiImg" alt="" src="mortgage_debt_homeowners_pdf-Artboard_1.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.6289%;margin-top:-14.1px;left:8.9587%;width:548px;">
+			<p class="g-pstyle0">White Bostonians are more likely to own their homes outright</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.1925%;margin-top:-9px;left:8.8253%;width:361px;">
+			<p class="g-pstyle1">Percent of homeowning households with mortgage debt by race</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.9668%;margin-top:-7.7px;left:89.8013%;width:50px;">
+			<p class="g-pstyle2">97.0%</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.5873%;margin-top:-7.7px;left:2.684%;width:88px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle0">V</span>erdean</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.9647%;margin-top:-7.7px;left:85.684%;width:41px;">
+			<p class="g-pstyle2">91.3</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:29.5853%;margin-top:-7.7px;left:1.3867%;width:100px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle1">r</span>i<span class="g-cstyle2">b</span>bean Black</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.9627%;margin-top:-7.7px;left:82.4947%;width:41px;">
+			<p class="g-pstyle2">87.5</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.5832%;margin-top:-7.7px;left:4.9092%;width:73px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:46.9606%;margin-top:-7.7px;left:82.16%;width:41px;">
+			<p class="g-pstyle2">87.1</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.512%;margin-top:-13.7px;left:2.684%;width:90px;">
+			<p class="g-pstyle3">Not elsewhere</p>
+			<p class="g-pstyle3">        classified</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.9586%;margin-top:-7.7px;left:80.816%;width:41px;">
+			<p class="g-pstyle4">85.5</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.5791%;margin-top:-7.7px;left:4.9507%;width:71px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.9565%;margin-top:-7.7px;left:79.2214%;width:41px;">
+			<p class="g-pstyle2">83.6</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.5771%;margin-top:-7.7px;left:3.4146%;width:84px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle3">r</span>to Rican</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:73.9545%;margin-top:-7.7px;left:74.8573%;width:41px;">
+			<p class="g-pstyle2">78.4</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.575%;margin-top:-7.7px;left:2.3574%;width:93px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:82.9524%;margin-top:-7.7px;left:59.1626%;width:41px;">
+			<p class="g-pstyle4">59.7</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.4178%;margin-top:-7.7px;left:7.7667%;width:49px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.5153%;margin-top:-16.2px;left:9.0029%;width:618px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents multiracial households. </p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_3 -->
+	<div id="g-mortgage_debt_homeowners_pdf-Artboard_3" class="g-artboard" style="max-width: 350px;max-height: 280px" data-aspect-ratio="1.251" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 79.9274% 0;"></div>
+		<img id="g-mortgage_debt_homeowners_pdf-Artboard_3-img" class="g-mortgage_debt_homeowners_pdf-Artboard_3-img g-aiImg" alt="" src="mortgage_debt_homeowners_pdf-Artboard_3.png"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.8951%;margin-top:-6.5px;left:8.741%;width:261px;">
+			<p class="g-pstyle0">White Bostonians are more likely to own their homes outright</p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.5291%;margin-top:-4.7px;left:8.6108%;width:176px;">
+			<p class="g-pstyle1">Percent of homeowning households with mortgage debt by race</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.8191%;margin-top:-3.1px;left:87.5742%;width:35px;">
+			<p class="g-pstyle2">97.0%</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.1766%;margin-top:-3.1px;left:2.6221%;width:52px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle0">V</span>erdean</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:26.1132%;margin-top:-3.1px;left:83.5592%;width:31px;">
+			<p class="g-pstyle2">91.3</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:26.8282%;margin-top:-3.1px;left:0.357%;width:58px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle1">r</span>i<span class="g-cstyle2">b</span>bean Black</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.4074%;margin-top:-3.1px;left:80.4492%;width:31px;">
+			<p class="g-pstyle2">87.5</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.1223%;margin-top:-3.1px;left:4.292%;width:45px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:45.059%;margin-top:-3.1px;left:80.1228%;width:31px;">
+			<p class="g-pstyle2">87.1</p>
+		</div>
+		<div id="g-ai1-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:46.3925%;margin-top:-5.8px;left:1.6221%;width:53px;">
+			<p class="g-pstyle3">Not elsewhere</p>
+			<p class="g-pstyle3">        classified</p>
+		</div>
+		<div id="g-ai1-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.3531%;margin-top:-3.1px;left:78.8121%;width:31px;">
+			<p class="g-pstyle4">85.5</p>
+		</div>
+		<div id="g-ai1-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.0681%;margin-top:-3.1px;left:4.8325%;width:44px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai1-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.0048%;margin-top:-3.1px;left:77.2571%;width:31px;">
+			<p class="g-pstyle2">83.6</p>
+		</div>
+		<div id="g-ai1-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.3622%;margin-top:-3.1px;left:2.8346%;width:50px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle3">r</span>to Rican</p>
+		</div>
+		<div id="g-ai1-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:73.2989%;margin-top:-3.1px;left:73.0016%;width:31px;">
+			<p class="g-pstyle2">78.4</p>
+		</div>
+		<div id="g-ai1-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:73.6564%;margin-top:-3.1px;left:1.3037%;width:54px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai1-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:82.593%;margin-top:-3.1px;left:57.697%;width:31px;">
+			<p class="g-pstyle4">59.7</p>
+		</div>
+		<div id="g-ai1-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.308%;margin-top:-3.1px;left:7.5786%;width:34px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai1-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.705%;margin-top:-7.9px;left:8.7841%;width:293px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents multiracial households. </p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2023-04-08 22:06 -->
+
+
+
+
+
+
+<br>
+<br>
+
+<p>
+	Home ownership is a critical source of wealth creation for Americans. Property values across the country have skyrocketed in recent decades. Bostonians who own their homes outright have seen their net worth do the same.
+</p>
+
+<br>
+<p>
+	It should be noted that even if you still have mortgage debt, your house has probably become more valuable in recent years. This is a good thing in the long term: you own a mroe valuable asset. But if you're still making monthly payments, that's money you don't have to invest elsewhere or to address sudden expenses.
+</p>
+
+<br>
+<br>
+
+<p class="subhead">Avoiding long-term financial burdens</p>
+<br>
+
+<br>
+   
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Generated by ai2html v0.115.5 - 2023-04-06 20:38 -->
+<!-- ai file: medical_debt.pdf -->
+<style media="screen,print">
+	#g-medical_debt_pdf-box ,
+	#g-medical_debt_pdf-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-medical_debt_pdf-box p {
+		margin:0;
+	}
+	#g-medical_debt_pdf-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-medical_debt_pdf-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-medical_debt_pdf-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-medical_debt_pdf-box .g-aiPointText p { white-space: nowrap; }
+	#g-medical_debt_pdf-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-medical_debt_pdf-Artboard_1 p {
+		font-weight:500;
+		line-height:14px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-pstyle0 {
+		font-weight:700;
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-pstyle1 {
+		height:14px;
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-pstyle2 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(0,0,0);
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-pstyle3 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-pstyle4 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(255,255,255);
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-cstyle0 {
+		letter-spacing:0.014em;
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-cstyle1 {
+		letter-spacing:-0.01em;
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-cstyle2 {
+		letter-spacing:0.039em;
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-cstyle3 {
+		letter-spacing:-0.079em;
+	}
+	#g-medical_debt_pdf-Artboard_1 .g-cstyle4 {
+		letter-spacing:0.003em;
+	}
+	#g-medical_debt_pdf-Artboard_3 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-medical_debt_pdf-Artboard_3 p {
+		font-weight:500;
+		line-height:7px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-pstyle0 {
+		font-weight:700;
+		line-height:10px;
+		height:10px;
+		font-size:8px;
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-pstyle1 {
+		height:7px;
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-pstyle2 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		color:rgb(0,0,0);
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-pstyle3 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-pstyle4 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		color:rgb(255,255,255);
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-cstyle0 {
+		letter-spacing:0.014em;
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-cstyle1 {
+		letter-spacing:-0.01em;
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-cstyle2 {
+		letter-spacing:0.039em;
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-cstyle3 {
+		letter-spacing:-0.079em;
+	}
+	#g-medical_debt_pdf-Artboard_3 .g-cstyle4 {
+		letter-spacing:0.003em;
+	}
+
+</style>
+
+<div id="g-medical_debt_pdf-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-medical_debt_pdf-Artboard_1" class="g-artboard" style="width:750px; height:635.008375474479px;" data-aspect-ratio="1.181" data-min-width="750">
+<div style=""></div>
+		<img id="g-medical_debt_pdf-Artboard_1-img" class="g-medical_debt_pdf-Artboard_1-img g-aiImg" alt="" src="medical_debt_pdf-Artboard_1.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.042%;margin-top:-14.1px;left:8.8253%;width:663px;">
+			<p class="g-pstyle0">White Bostonians are among the least likely to owe money on medical bills</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.4467%;margin-top:-9px;left:8.8253%;width:346px;">
+			<p class="g-pstyle1">Percent of households with outstanding medical debt by race</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.3232%;margin-top:-7.7px;left:28.7507%;width:50px;">
+			<p class="g-pstyle2">24.1%</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.4256%;margin-top:-7.7px;left:2.3574%;width:93px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.457%;margin-top:-7.7px;left:26.3426%;width:41px;">
+			<p class="g-pstyle2">19.8</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:29.5593%;margin-top:-7.7px;left:4.8773%;width:73px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.2206%;margin-top:-7.7px;left:24.076%;width:41px;">
+			<p class="g-pstyle4">17.1</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.693%;margin-top:-7.7px;left:4.9507%;width:71px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.3544%;margin-top:-7.7px;left:24.076%;width:41px;">
+			<p class="g-pstyle2">17.1</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.8268%;margin-top:-7.7px;left:1.3867%;width:100px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle0">r</span>i<span class="g-cstyle1">b</span>bean Black</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.4881%;margin-top:-7.7px;left:21.3907%;width:41px;">
+			<p class="g-pstyle2">13.9</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.9054%;margin-top:-13.7px;left:2.7995%;width:90px;">
+			<p class="g-pstyle3">Not elsewhere</p>
+			<p class="g-pstyle3">        classified</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.6218%;margin-top:-7.7px;left:18.872%;width:41px;">
+			<p class="g-pstyle4">10.9</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.0943%;margin-top:-7.7px;left:7.7667%;width:49px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.7556%;margin-top:-7.7px;left:18.6214%;width:41px;">
+			<p class="g-pstyle2">10.6</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.228%;margin-top:-7.7px;left:3.4146%;width:84px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle2">r</span>to Rican</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.7318%;margin-top:-7.7px;left:15.3733%;width:36px;">
+			<p class="g-pstyle2">2.0</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.3617%;margin-top:-7.7px;left:2.684%;width:88px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle3">V</span>erdean</p>
+		</div>
+		<div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:93.0756%;margin-top:-9px;left:8.9613%;width:618px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+		</div>
+		<div id="g-ai0-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.2803%;margin-top:-9px;left:8.9613%;width:434px;">
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents mul<span class="g-cstyle4">t</span>iracial households. </p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_3 -->
+	<div id="g-medical_debt_pdf-Artboard_3" class="g-artboard" style="max-width: 350px;max-height: 298px" data-aspect-ratio="1.176" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 85.0535% 0;"></div>
+		<img id="g-medical_debt_pdf-Artboard_3-img" class="g-medical_debt_pdf-Artboard_3-img g-aiImg" alt="" src="medical_debt_pdf-Artboard_3.png"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.6097%;margin-top:-6.6px;left:8.379%;width:321px;">
+			<p class="g-pstyle0">White Bostonians are among the least likely to owe money on medical bills</p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.849%;margin-top:-4.3px;left:8.379%;width:173px;">
+			<p class="g-pstyle1">Percent of households with outstanding medical debt by race</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.6945%;margin-top:-3.6px;left:28.2974%;width:35px;">
+			<p class="g-pstyle2">24.1%</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.0382%;margin-top:-3.6px;left:0.913%;width:55px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:29.1003%;margin-top:-3.6px;left:25.8903%;width:31px;">
+			<p class="g-pstyle2">19.8</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:30.1081%;margin-top:-3.6px;left:4.4322%;width:46px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.5061%;margin-top:-3.6px;left:23.6244%;width:31px;">
+			<p class="g-pstyle4">17.1</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.178%;margin-top:-3.6px;left:4.5054%;width:45px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.5761%;margin-top:-3.6px;left:23.6244%;width:31px;">
+			<p class="g-pstyle2">17.1</p>
+		</div>
+		<div id="g-ai1-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.2479%;margin-top:-3.6px;left:0.1428%;width:59px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle0">r</span>i<span class="g-cstyle1">b</span>bean Black</p>
+		</div>
+		<div id="g-ai1-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.646%;margin-top:-3.6px;left:20.9401%;width:31px;">
+			<p class="g-pstyle2">13.9</p>
+		</div>
+		<div id="g-ai1-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.258%;margin-top:-6.4px;left:1.8552%;width:54px;">
+			<p class="g-pstyle3">Not elsewhere</p>
+			<p class="g-pstyle3">        classified</p>
+		</div>
+		<div id="g-ai1-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.0518%;margin-top:-3.6px;left:18.4223%;width:31px;">
+			<p class="g-pstyle4">10.9</p>
+		</div>
+		<div id="g-ai1-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.3877%;margin-top:-3.6px;left:7.3206%;width:35px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai1-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.1217%;margin-top:-3.6px;left:18.1717%;width:31px;">
+			<p class="g-pstyle2">10.6</p>
+		</div>
+		<div id="g-ai1-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.4577%;margin-top:-3.6px;left:2.9701%;width:51px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle2">r</span>to Rican</p>
+		</div>
+		<div id="g-ai1-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.1916%;margin-top:-3.6px;left:14.9248%;width:28px;">
+			<p class="g-pstyle2">2.0</p>
+		</div>
+		<div id="g-ai1-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.5276%;margin-top:-3.6px;left:2.2395%;width:53px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle3">V</span>erdean</p>
+		</div>
+		<div id="g-ai1-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:93.1346%;margin-top:-4.3px;left:8.5149%;width:300px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+		</div>
+		<div id="g-ai1-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.4861%;margin-top:-4.3px;left:8.5149%;width:214px;">
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents mul<span class="g-cstyle4">t</span>iracial households. </p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2023-04-06 20:38 -->
+
+
+
+<br>
+<br>
+
+<p>
+    Medical debt can be debilitating. As can student loans. These are huge balances for most people, and ones they often can't avoud taking on, whether it's because a bachelor's degree is becoming more and more necessary of the job market or because an exorbitantly expensive treatment might save their life. 
+</p>
+
+<br>
+
+<p>
+	
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Generated by ai2html v0.115.5 - 2023-04-07 23:18 -->
+<!-- ai file: student_loan_debt.pdf -->
+<style media="screen,print">
+	#g-student_loan_debt_pdf-box ,
+	#g-student_loan_debt_pdf-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-student_loan_debt_pdf-box p {
+		margin:0;
+	}
+	#g-student_loan_debt_pdf-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-student_loan_debt_pdf-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-student_loan_debt_pdf-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-student_loan_debt_pdf-box .g-aiPointText p { white-space: nowrap; }
+	#g-student_loan_debt_pdf-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 p {
+		font-weight:500;
+		line-height:14px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-pstyle0 {
+		font-weight:700;
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-pstyle1 {
+		height:14px;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-pstyle2 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(0,0,0);
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-pstyle3 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-pstyle4 {
+		font-weight:700;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(255,255,255);
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-cstyle0 {
+		letter-spacing:0.014em;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-cstyle1 {
+		letter-spacing:-0.01em;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-cstyle2 {
+		letter-spacing:-0.079em;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-cstyle3 {
+		letter-spacing:0.039em;
+	}
+	#g-student_loan_debt_pdf-Artboard_1 .g-cstyle4 {
+		letter-spacing:0.003em;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 p {
+		font-weight:500;
+		line-height:7px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:6px;
+		text-align:left;
+		color:rgb(60,60,60);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-pstyle0 {
+		font-weight:700;
+		line-height:10px;
+		height:10px;
+		font-size:8px;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-pstyle1 {
+		height:7px;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-pstyle2 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		color:rgb(0,0,0);
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-pstyle3 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-pstyle4 {
+		font-weight:700;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+		color:rgb(255,255,255);
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-cstyle0 {
+		letter-spacing:0.014em;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-cstyle1 {
+		letter-spacing:-0.01em;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-cstyle2 {
+		letter-spacing:-0.079em;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-cstyle3 {
+		letter-spacing:0.039em;
+	}
+	#g-student_loan_debt_pdf-Artboard_3 .g-cstyle4 {
+		letter-spacing:0.003em;
+	}
+
+</style>
+
+<div id="g-student_loan_debt_pdf-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-student_loan_debt_pdf-Artboard_1" class="g-artboard" style="width:750px; height:611.088176624447px;" data-aspect-ratio="1.227" data-min-width="750">
+<div style=""></div>
+		<img id="g-student_loan_debt_pdf-Artboard_1-img" class="g-student_loan_debt_pdf-Artboard_1-img g-aiImg" alt="" src="student_loan_debt_pdf-Artboard_1.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.2149%;margin-top:-24.9px;left:9.092%;width:601px;">
+			<p class="g-pstyle0">White Bostonians are less likely than their neighbors to be saddled </p>
+			<p class="g-pstyle0">with student loan debt</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:10.6429%;margin-top:-9px;left:9.092%;width:373px;">
+			<p class="g-pstyle1">Percent of households with outstanding student loan debt by race </p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.4432%;margin-top:-7.7px;left:37.2627%;width:50px;">
+			<p class="g-pstyle2">34.4%</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.9341%;margin-top:-7.7px;left:2.624%;width:93px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.9344%;margin-top:-7.7px;left:37.8747%;width:41px;">
+			<p class="g-pstyle2">33.7</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.4254%;margin-top:-7.7px;left:1.6533%;width:100px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle0">r</span>i<span class="g-cstyle1">b</span>bean Black</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.4257%;margin-top:-7.7px;left:33.8467%;width:41px;">
+			<p class="g-pstyle2">28.9</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.8985%;margin-top:-13.7px;left:2.6964%;width:93px;">
+			<p class="g-pstyle3">Not elsewhere </p>
+			<p class="g-pstyle3">classified</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:46.917%;margin-top:-7.7px;left:33.0907%;width:41px;">
+			<p class="g-pstyle4">28.0</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.4079%;margin-top:-7.7px;left:5.5857%;width:71px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.4082%;margin-top:-7.7px;left:30.9934%;width:41px;">
+			<p class="g-pstyle2">25.5</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.8992%;margin-top:-7.7px;left:3.3205%;width:88px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle2">V</span>erdean</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.8995%;margin-top:-7.7px;left:27.3%;width:41px;">
+			<p class="g-pstyle2">21.1</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.3904%;margin-top:-7.7px;left:5.292%;width:73px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.3908%;margin-top:-7.7px;left:25.8733%;width:41px;">
+			<p class="g-pstyle2">19.4</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.8817%;margin-top:-7.7px;left:3.8318%;width:84px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle3">r</span>to Rican</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.882%;margin-top:-7.7px;left:25.4533%;width:41px;">
+			<p class="g-pstyle4">18.9</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:85.373%;margin-top:-7.7px;left:8.4788%;width:49px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:93.937%;margin-top:-9px;left:9.228%;width:618px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+		</div>
+		<div id="g-ai0-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.3916%;margin-top:-9px;left:9.228%;width:434px;">
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents mul<span class="g-cstyle4">t</span>iracial households. </p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_3 -->
+	<div id="g-student_loan_debt_pdf-Artboard_3" class="g-artboard" style="max-width: 350px;max-height: 296px" data-aspect-ratio="1.183" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 84.5427% 0;"></div>
+		<img id="g-student_loan_debt_pdf-Artboard_3-img" class="g-student_loan_debt_pdf-Artboard_3-img g-aiImg" alt="" src="student_loan_debt_pdf-Artboard_3.png"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.981%;margin-top:-11.7px;left:9.1644%;width:292px;">
+			<p class="g-pstyle0">White Bostonians are less likely than their neighbors to be saddled</p>
+			<p class="g-pstyle0">with student loan debt</p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:10.9072%;margin-top:-4.3px;left:9.1644%;width:187px;">
+			<p class="g-pstyle1">Percent of households with outstanding student loan debt by race </p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.4686%;margin-top:-3.6px;left:37.5118%;width:35px;">
+			<p class="g-pstyle2">34.4%</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.1445%;margin-top:-3.6px;left:1.656%;width:55px;">
+			<p class="g-pstyle3">Other Hispanic</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.5933%;margin-top:-3.6px;left:38.1278%;width:31px;">
+			<p class="g-pstyle2">33.7</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.2692%;margin-top:-3.6px;left:0.679%;width:59px;">
+			<p class="g-pstyle3">Ca<span class="g-cstyle0">r</span>i<span class="g-cstyle1">b</span>bean Black</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.718%;margin-top:-3.6px;left:34.0745%;width:31px;">
+			<p class="g-pstyle2">28.9</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.3461%;margin-top:-6.5px;left:2.7287%;width:55px;">
+			<p class="g-pstyle3">Not elsewhere </p>
+			<p class="g-pstyle3">classified</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:46.1807%;margin-top:-3.6px;left:33.3138%;width:31px;">
+			<p class="g-pstyle4">28.0</p>
+		</div>
+		<div id="g-ai1-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:46.5186%;margin-top:-3.6px;left:5.6361%;width:45px;">
+			<p class="g-pstyle3">U.S. Black</p>
+		</div>
+		<div id="g-ai1-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.3054%;margin-top:-3.6px;left:31.2033%;width:31px;">
+			<p class="g-pstyle2">25.5</p>
+		</div>
+		<div id="g-ai1-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.6433%;margin-top:-3.6px;left:2.8569%;width:53px;">
+			<p class="g-pstyle3">Cape <span class="g-cstyle2">V</span>erdean</p>
+		</div>
+		<div id="g-ai1-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.4301%;margin-top:-3.6px;left:27.4868%;width:31px;">
+			<p class="g-pstyle2">21.1</p>
+		</div>
+		<div id="g-ai1-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.106%;margin-top:-3.6px;left:4.8406%;width:46px;">
+			<p class="g-pstyle3">Dominican</p>
+		</div>
+		<div id="g-ai1-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:73.5548%;margin-top:-3.6px;left:26.0511%;width:31px;">
+			<p class="g-pstyle2">19.4</p>
+		</div>
+		<div id="g-ai1-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.2307%;margin-top:-3.6px;left:3.3711%;width:51px;">
+			<p class="g-pstyle3">Pue<span class="g-cstyle3">r</span>to Rican</p>
+		</div>
+		<div id="g-ai1-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:82.6795%;margin-top:-3.6px;left:25.6285%;width:31px;">
+			<p class="g-pstyle4">18.9</p>
+		</div>
+		<div id="g-ai1-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.3555%;margin-top:-3.6px;left:8.5473%;width:35px;">
+			<p class="g-pstyle3">White</p>
+		</div>
+		<div id="g-ai1-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.6779%;margin-top:-4.3px;left:9.3014%;width:302px;">
+			<p class="g-pstyle1">Source: Federal Reserve Bank of Boston. The &ldquo;U.S. Black&rdquo;  category denotes multigenerational American Black </p>
+		</div>
+		<div id="g-ai1-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.0435%;margin-top:-4.3px;left:9.3014%;width:216px;">
+			<p class="g-pstyle1">families. &ldquo;Not elsewhere classified&rdquo; largely represents mul<span class="g-cstyle4">t</span>iracial households. </p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2023-04-07 23:18 -->
+
+
+<br>
+
+<p>
+    Some filler text!
+</p>
+
+<br>
+
+
+
+
+
+        
+      </section>
+    
+    </main>
+    
+</div>
+  </body>
+</html>
